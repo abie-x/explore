@@ -6,10 +6,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "server": "nodemon server.js",
-    "data:import": "node seeder.js",
-    "data:destroy": "node seeder.js -d"
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder"
   },
   "keywords": [],
   "author": "aebie_x",
