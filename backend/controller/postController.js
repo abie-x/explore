@@ -41,10 +41,24 @@ const postExperience = asyncHandler(async (req, res) => {
             let info = await transporter.sendMail({
                 from: 'abhiramzmenon@gmail.com',
                 to: `${email}`,
-                subject: "Testing, testing, 123",
+                subject: " Exciting crypto rewards await you! Thank you for being part of the community",
                 html: `
-                <h1>Hello there</h1>
-                <p>Isn't NodeMailer useful?</p>
+                <h3>Hello there ${username},</h3>
+                <p>We wanted to take a moment to express our deepest gratitude for joining us on this incredible journey. Your contribution and dedication to sharing your travel experiences are the very foundation upon which our movement is built. Thank you for being an essential part of Vybes.</p>
+                <br />
+                <p>As a token of our appreciation, we are excited to announce that you will be receiving exclusive crypto tokens when we launch our app later this year. These tokens hold immense value, and they signify your integral role in shaping the future of travel in India. You are not just a participant; you are a trailblazer, a pioneer, and a catalyst for change.</p>
+                <br />
+                <p>With these crypto tokens, you will have the power to unlock a world of extraordinary travel experiences. Picture yourself exploring hidden gems, indulging in unique cultural encounters, and venturing off the beaten path, all made possible through the value of these tokens. The more you accumulate, the more you'll be able to customize and elevate your future journeys.</p>
+                <br />
+                <p>But it doesn't end there. Your involvement in this movement extends far beyond your personal gain. By sharing your experiences and spreading the word, you are actively contributing to the growth and enrichment of our community. Together, we will revolutionize the way people travel, showcasing the wonders of India to the world.</p>
+                <br />
+                <p>We invite you to share your association with Vybes with pride. Let your friends, family, and social media followers know that you are part of something remarkable. Encourage them to join us, to share their own stories, and to become part of this transformative movement. Together, we will create a travel culture that celebrates exploration, connection, and the sheer joy of discovering the incredible wonders of India. </p>
+                <br />
+                <p>Stay tuned for further updates and announcements about the app launch. The future of travel is in our hands, and together, we will redefine what it means to explore.</p>
+                <br />
+                <br />
+                <p>With boundless gratitude,</p>
+                <p>Vybes</p>
                 `,
             });
 
