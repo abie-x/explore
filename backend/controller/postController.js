@@ -35,6 +35,7 @@ const postExperience = asyncHandler(async (req, res) => {
                   pass: "vdfmuyguhvctijwx", // Password (for gmail, your app password)
                   // ⚠️ For better security, use environment variables set on the server for these values when deploying
                 },
+                debug: true
             });
         
             let info = await transporter.sendMail({
