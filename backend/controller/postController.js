@@ -60,7 +60,7 @@ const postExperience = asyncHandler(async (req, res) => {
       main()
   
       // Send a success response
-      return res.status(201).json({ message: 'Experience posted successfully', info, post: savedPost });
+      return res.status(201).json({ message: 'Experience posted successfully', post: savedPost });
     } catch (error) {
       // Handle any errors that occur during the process
       console.error('Error posting experience:', error);
