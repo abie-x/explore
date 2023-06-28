@@ -60,11 +60,11 @@ const postExperience = asyncHandler(async (req, res) => {
       main()
   
       // Send a success response
-      return res.status(201).json({ message: 'Experience posted successfully', post: savedPost });
+      return res.status(201).json({ message: 'Experience posted successfully'});
     } catch (error) {
       // Handle any errors that occur during the process
       console.error('Error posting experience:', error);
-      return res.status(500).json({ error: 'An error occurred while posting the experience' });
+      return res.status(500).json({ message: 'An error occurred while posting the experience' });
     }
 });
 
@@ -76,7 +76,7 @@ const getFlagImageLink = (country) => {
 const getLatestExperiences = asyncHandler(async (req, res) => {
     try {
       // Retrieve the latest 8 experiences from the database
-      const experiences = await Post.find().sort({ createdAt: -1 }).limit(6);
+      const experiences = await Post.find().sort({ createdAt: -1 }).limit(4);
   
       // Map the experiences to include the flag image link based on the country
       const experiencesWithFlag = await Promise.all(
@@ -91,7 +91,7 @@ const getLatestExperiences = asyncHandler(async (req, res) => {
       return res.status(200).json(experiencesWithFlag);
     } catch (error) {
       console.error('Error retrieving experiences:', error);
-      return res.status(500).json({ error: 'An error occurred while retrieving experiences' });
+      return res.status(500).json({ message: 'An error occurred while retrieving experiences' });
     }
 });
 
