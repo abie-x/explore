@@ -28,9 +28,9 @@ const postExperience = asyncHandler(async (req, res) => {
         try {
             let transporter = nodemailer.createTransport({
                 host: "smtp.gmail.com", // SMTP server address (usually mail.your-domain.com)
-                port: 465, // Port for SMTP (usually 465)
+                port: 587, // Port for SMTP (usually 465)
                 secure: true, // Usually true if connecting to port 465
-                auth: {
+                auth: {  
                   user: "abhiramzmenon@gmail.com", // Your email address
                   pass: "vdfmuyguhvctijwx", // Password (for gmail, your app password)
                   // ⚠️ For better security, use environment variables set on the server for these values when deploying
