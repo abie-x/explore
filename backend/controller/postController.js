@@ -44,7 +44,7 @@ const postExperience = asyncHandler(async (req, res) => {
                 subject: " Exciting crypto rewards await you! Thank you for being part of the community",
                 html: `
                 <h3>Hello there ${username},</h3>
-                <p>We wanted to take a moment to express our deepest gratitude for joining us on this incredible journey. Your contribution and dedication to sharing your travel experiences are the very foundation upon which our movement is built. Thank you for being an essential part of Vybes.</p>
+                <p>We wanted to take a moment to express our deepest gratitude for joining us on this incredible journey. <br /> Your contribution and dedication to sharing your travel experiences are the very foundation upon which our movement is built. Thank you for being an essential part of Vybes.</p>
                 <br />
                 <p>As a token of our appreciation, we are excited to announce that you will be receiving exclusive crypto tokens when we launch our app later this year. These tokens hold immense value, and they signify your integral role in shaping the future of travel in India. You are not just a participant; you are a trailblazer, a pioneer, and a catalyst for change.</p>
                 <br />
