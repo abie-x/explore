@@ -83,7 +83,8 @@ const getLatestExperiences = asyncHandler(async (req, res) => {
         experiences.map(async (experience) => {
           const { country } = experience;
           const flagImageLink = getFlagImageLink(country);
-          return { ...experience._doc, flagImageLink };
+          console.log(experience)
+          return { username: experience.username, country: experience.country, experience: experience.experience, flagImageLink };
         })
       );
   
