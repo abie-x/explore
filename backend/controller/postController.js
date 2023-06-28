@@ -46,6 +46,9 @@ const postExperience = asyncHandler(async (req, res) => {
                 <p>Isn't NodeMailer useful?</p>
                 `,
             });
+
+            console.log('checking the backend api')
+            console.log(info)
         
             console.log(info.messageId);
         } catch(error) {
