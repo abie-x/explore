@@ -32,8 +32,8 @@ const postExperience = asyncHandler(async (req, res) => {
                 port: 465, // Port for SMTP (usually 465)
                 secure: true, // Usually true if connecting to port 465
                 auth: {  
-                  user: "abhiramzmenon@gmail.com", // Your email address
-                  pass: "vdfmuyguhvctijwx", // Password (for gmail, your app password)
+                  user: "vybeslifestyle@gmail.com", // Your email address
+                  pass: "vezbgfewynokolmk", // Password (for gmail, your app password)
                   // ⚠️ For better security, use environment variables set on the server for these values when deploying
                 },
                 debug: true
@@ -89,7 +89,7 @@ const postExperience = asyncHandler(async (req, res) => {
           // });
           
           let info = await transporter.sendMail({
-            from: 'abhiramzmenon@gmail.com',
+            from: 'vybeslifestyle@gmail.com',
             to: `${email}`,
             subject: "Exciting crypto tokens worth $100 for you🔥 Thank you for being part of the community!",
             html: `
@@ -251,9 +251,15 @@ const getInfo = asyncHandler(async (req, res) => {
     const shuffledExperiences = posts.sort(() => 0.5 - Math.random());
 
     const randomExperiences = shuffledExperiences.slice(0, 4);
+    console.log(randomExperiences)
+
+    const transformedExperiences = randomExperiences.map((experiences) => {
+      const { username, country, experience, flagImageLink } = experiences;
+      return { username, country, experience, flagImageLink };
+    });
     
     // Send the count as a response
-    return res.status(200).json({ count, randomExperiences });
+    return res.status(200).send(transformedExperiences);
   } catch (error) {
     console.error('Error retrieving shared users count:', error);
     return res.status(500).json({ error: 'An error occurred while retrieving shared users count' });
