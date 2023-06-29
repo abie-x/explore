@@ -20,8 +20,8 @@ const posts = [
     {
         "username": "Avi",
         "country": "Spain",
-        "email": "In Jaipur, I faced challenges in accessing reliable tourist information, including maps, guides, and updated schedules. Improving the availability and accessibility of accurate tourist information can greatly enhance the visitor experience.",
-        "experience": "Fell victim to a taxi overcharging scam.",
+        "email": "avi@gmail.com",
+        "experience": "In Jaipur, I faced challenges in accessing reliable tourist information, including maps, guides, and updated schedules. Improving the availability and accessibility of accurate tourist information can greatly enhance the visitor experience.",
         "addToNewsletter": true,
         "authentic": false,
         "flagImageLink": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg"
