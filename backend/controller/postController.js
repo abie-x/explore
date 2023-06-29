@@ -2,6 +2,7 @@ import asyncHandler from 'express-async-handler'
 import Post from '../models/postModel.js'
 import { findFlagUrlByCountryName } from 'country-flags-svg';
 import nodemailer from 'nodemailer'
+import posts from '../data/postData.js';
 
 
 
@@ -242,10 +243,28 @@ const getLatestExperiences = asyncHandler(async (req, res) => {
     }
 });
 
+const getInfo = asyncHandler(async (req, res) => {
+  try {
+    // Fetch the count of shared users from the database
+    const count = await Post.countDocuments();
+
+    const shuffledExperiences = posts.sort(() => 0.5 - Math.random());
+
+    const randomExperiences = shuffledExperiences.slice(0, 4);
+    
+    // Send the count as a response
+    return res.status(200).json({ count, randomExperiences });
+  } catch (error) {
+    console.error('Error retrieving shared users count:', error);
+    return res.status(500).json({ error: 'An error occurred while retrieving shared users count' });
+  }
+})
+
 
 
 export {
     postExperience,
-    getLatestExperiences
+    getLatestExperiences,
+    getInfo
 }
   
