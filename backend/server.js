@@ -13,6 +13,8 @@ connectDB()
 //initializing the express app
 const app = express()
 
+
+// this for integrating backend and frontend
 app.use(cors())
 app.use(express.json())   
 
